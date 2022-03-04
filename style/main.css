@@ -3,7 +3,7 @@
 ======================*/
 
 body{
-    background-color: rgba(50, 170, 240, 0.562);
+    background-color: hsla(202, 86%, 57%, 0.562);
     display:flex; 
     flex-direction:column;    
     margin: 1em auto;
@@ -28,6 +28,98 @@ footer{
 }
 
 /*====================
+========Columns=======
+======================*/
+
+/* ponemos todos los elementos 
+por orden de aparición en el html 
+-pensar bien a qué le damos CSS.
+A qué caja. 
+Por ejemplo:
+display inline: se da a las cajas
+display flex: se da a la caja que contiene las cajas.
+*/
+
+.desktop-four-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-four-columns .column{
+    width: 22%;
+}
+
+.desktop-three-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-three-columns .column{
+    width: 30%;
+}
+
+.desktop-two-columns .column{
+    width: 48%;
+}
+
+.desktop-two-columns-aside{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-two-columns-aside .column-aside{
+    width: 30%;
+}
+
+/* las etiquetas css con punto 
+se refiere a una caja.
+si la etiqueta no tiene caja, por ejemplo:
+-span
+-text area
+-label
+-img
+
+algunas se ponen 
+al final de la misma
+etiqueta de la label
+  */
+.desktop-two-columns-aside .column-main{
+    width: 65%;
+}
+
+.desktop-two-columns-inline{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-two-columns-inline .column{
+    width: 48%;
+}
+
+.desktop-two-columns-inline .column div{
+    display: flex;
+    margin-right: 1em;
+}
+
+.desktop-one-column{
+    width: 100%;
+}
+
+.desktop-one-column .column{
+    width: 100%;
+}
+
+.desktop-two-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*====================
 ======Typography======
 ======================*/
 
@@ -43,7 +135,7 @@ h5, h6 {
     font-family: "Ubuntu Condensed";
 }
 
-a, td, p, button{
+a, td, p, button, span, label{
     font-family: "Ubuntu";
     color: hsl(270, 3%, 14%);
 }
@@ -87,6 +179,7 @@ a:focus, a:hover {
     outline-offset: 0;
     text-decoration: none;
 }
+
 
 /*====================
 ========Image=========
@@ -217,6 +310,108 @@ img {
 }   
 
 /*====================
+=======Contacto=======
+======================*/
+
+.contact{
+    width: 100%;
+}
+
+.contact-title{
+    margin: 3em 0;
+}
+
+.contact-title h2{
+    text-align: center;
+}
+
+.contact-elements{
+    margin-left: 10%;
+}
+
+.contact-element{
+    margin-bottom: 1.5rem;
+}
+
+.contact-element-icon{
+    display: inline;
+    margin-right: 1.5rem;
+}
+
+.contact-element-icon svg{
+    width: 3rem;
+}
+
+.contact-element-icon svg path{
+    fill: hsl(251, 72%, 48%);
+}
+
+.contact-element-text{
+    display: inline;
+}
+
+.contact-element-text span{
+    color: hsl(251, 86%, 36%);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-form-element{
+    margin-bottom: 1rem;
+}
+
+.contact-form-element-label{
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-element-label label{
+    color: hsl(251, 86%, 36%);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contact-form-element-input input{
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.3rem 2%;
+    width: 96%;
+}
+
+.contact-form-element-input input:focus{
+    outline: none;
+}
+
+.contact-form-element-input textarea{
+    border: none;
+    border-radius: 0.5rem;
+    height: 15vh;
+    padding: 0.3rem 2%;
+    width: 96%;
+}
+
+.contact-form-element-input textarea:focus{
+    outline: none;
+}
+
+.contact-form-element-button{
+    float: right;
+}
+
+.contact-form-element-button button{
+    background-color: hsl(251, 86%, 36%);
+    border-radius: 0.5rem;
+    color:hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-family: 'Arial';
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+
+.contact-form-element-button button:hover{
+    background-color: hsl(251, 50%, 52%);
+}
+
+/*====================
 =======Footer=========
 ======================*/
 
@@ -233,6 +428,85 @@ img {
 
 
 @media (max-width: 479px) {
+
+     /*====================
+    ========Columns=======
+    ======================*/
+
+    .mobile-one-column{
+        width: 100%;
+    }
+
+    .mobile-one-column .column{
+        width: 100%;
+    }
+
+    .mobile-one-column-inline{
+        display: inherit;
+        width: 100%;
+    }
+    
+    .mobile-one-column-inline .column{
+        border-bottom: 1px solid hsl(0, 0%, 87%);
+        display: flex;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+    
+    .mobile-one-column-inline .column div{
+        display: inherit;
+        margin-right: 1em;
+        width: 100%;
+    }
+
+    .mobile-two-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-two-columns .column{
+        width: 48%;
+    }
+
+    .desktop-two-columns-aside .column-aside{
+        display: none;
+    }
+
+    .mobile-two-columns-aside .column-main{
+        width: 100%;
+    }
+
+    .mobile-three-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-three-columns .column{
+        width: 30%;
+    }
+
+    .mobile-three-columns-start{
+        display: flex;
+        justify-content: start;
+        width: 100%;
+    }
+
+    .mobile-three-columns-start .column{
+        width: inherit;
+    }
+
+    .mobile-four-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-four-columns .column{
+        width: 22%;
+    }
+
 
     .logo img{
         height: 6em;
