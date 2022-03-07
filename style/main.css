@@ -13,12 +13,11 @@ body{
 
 header{
     display: flex;
-    height: 10vh;
     justify-content: space-between;
 }
 
 main{
-    margin: 1em 0;
+    margin: 2rem 0;
     width: 100%;
 }
 
@@ -144,9 +143,11 @@ h1 {
     font-size: 2.5em;
     font-weight: 600;
     text-decoration: none;
+    margin-top: 0.8em;
 }
 
 h2 {
+    text-align: center;
     font-size: 2em;
     font-weight: 600;
     text-decoration: none;
@@ -193,29 +194,29 @@ img {
 =======Header=========
 ======================*/
 
-.logo, .titulo, .menu{
+.logo, .title, .menu{
     margin: auto 0;
 }
 
-.logo-titulo{
+.logo-title{
     display: flex;
     justify-content: start;
 }
 
-.logo-titulo h1{
-    font-size: 1.5em;
+.logo-title h1{
+    font-size: 2em;
 }
 
 .logo img{
-    height: 6em;
-    width: 6em;
+    height: 7em;
+    width: 7em;
 }
 
-.titulo{
+.title{
     margin-left: 1em;
 }
 
-.titulo-h1{
+.title-h1{
     text-align: center;
 }
 
@@ -232,7 +233,7 @@ img {
 }
 
 /*====================
-=======Slider=========
+=======Home=========
 ======================*/
 
 /* .slider-video{
@@ -244,70 +245,62 @@ img {
     width: 100%;
 } */
 
-.slider-img{
+.home{
+    border: 1rem solid hsl(0, 0%, 100%);
+    border-radius: 0.4em;
+    width: 98%;
+}
+
+.home-slider{
     width: 100%;
 } 
 
-/*====================
-=======Destacados=====
-======================*/
-
-.destacados-titulo{
-    margin: 2em 0;
+.home-featured{
+    background-color: hsl(0, 0%, 100%);
+    padding: 0 5%;
+    width: 90%;
 }
 
-.destacados-titulo h2{
+.home-featured-title{
+    text-align: center;
+    padding: 2em 0;
+}
+
+.home-featured-title h2{
     text-align: center;
 }
 
-.destacados-fichas {
-    display: flex;
-    justify-content: space-between;
-}
-
-.destacados-ficha{
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 0.5em;
-    box-shadow: 1.5px 1.5px 8px 1.5px rgba(69, 96, 185, 0.8);
-    margin: 0 1em;
-    padding: 1em;
-    width: 25%;
-}
-
-.destacados-ficha-titulo{
+.home-featured-element-title{
     margin-bottom: 1em;
     width: 100%;
 }
 
-.destacados-ficha-titulo h3{
+.home-featured-element-title h3{
     text-align: center;
     margin: 0.5em;
     font-size: 1.5em;
 }
+
+/* .home-featured-four-columns{
+    text-align: center;
+} */
 
 /*====================
 ===Sinopsis/Portada====
 ======================*/
 
 .sinopsis{
-    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    width: 90%;
     display: flex;
-    margin: 4em 0;
+    padding: 4em 5%;
     justify-content: space-between;
 }
 
-.sinopsis-descripcion{
-    width: 45%;
-}
-
-.sinopsis-descripcion p{
+.sinopsis-description p{
     font-size: 1.4em;
-    text-align: left;
+    text-align: justify;
 }
-
-.sinopsis-imagen{
-   width: 45%;
-}   
 
 /*====================
 =======Contacto=======
@@ -381,7 +374,7 @@ img {
     outline: none;
 }
 
-.contact-form-element-input textarea{
+input textarea{
     border: none;
     border-radius: 0.5rem;
     height: 15vh;
@@ -431,9 +424,67 @@ img {
 
      /*====================
     ========Columns=======
-    ======================*/
+    ======================*/ 
+
+    .mobile-four-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-four-columns .column{
+        width: 22%;
+    }
+
+    .mobile-three-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-three-columns .column{
+        width: 30%;
+    }
+
+    .mobile-three-columns-start{
+        display: flex;
+        justify-content: start;
+        width: 100%;
+    }
+
+    .mobile-three-columns-start .column{
+        width: inherit;
+    }
+
+    
+    .mobile-two-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-two-columns .column{
+        width: 48%;
+    }
+
+    .desktop-two-columns-aside .column-aside{
+        display: none;
+    }
+
+    .mobile-two-columns-aside .column-main{
+        width: 100%;
+    }
+
+    .mobile-one-column-reverse{
+        flex-direction: column-reverse;
+    }
+
+    .mobile-one-column-reverse .column{
+        width: 100%;
+    }
 
     .mobile-one-column{
+        flex-direction: column;
         width: 100%;
     }
 
@@ -459,79 +510,56 @@ img {
         width: 100%;
     }
 
-    .mobile-two-columns{
-        display: flex;
-        justify-content: space-between;
+    /*====================
+    =======Header=========
+    ======================*/
+
+
+    .logo-title {
+        display: block;
+        margin-left: 0.2em;
         width: 100%;
     }
 
-    .mobile-two-columns .column{
-        width: 48%;
+    .logo-title h1 {
+        font-size: 1.2em;
+        text-align: center;
     }
 
-    .desktop-two-columns-aside .column-aside{
-        display: none;
+    .logo{
+        margin: 0 auto;
+        width: max-content;
     }
-
-    .mobile-two-columns-aside .column-main{
-        width: 100%;
-    }
-
-    .mobile-three-columns{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .mobile-three-columns .column{
-        width: 30%;
-    }
-
-    .mobile-three-columns-start{
-        display: flex;
-        justify-content: start;
-        width: 100%;
-    }
-
-    .mobile-three-columns-start .column{
-        width: inherit;
-    }
-
-    .mobile-four-columns{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .mobile-four-columns .column{
-        width: 22%;
-    }
-
 
     .logo img{
-        height: 6em;
+        height: 8em;
         width: 8em;
     }
 
+    .title{
+        margin: 0;
+        width: 100%;
+    }
+    
     .menu{
         display: none;
     }
 
-    .titulo{
-        margin-top: 1em;
+   /*====================
+    =======Home==========
+    ======================*/
+
+    .home {
+        border: 0.5rem solid hsl(0, 0%, 100%);
+        width: 95%;
     }
 
-    .destacados-fichas{
-        display: block;
+    .home-featured-title {
+        padding: 2em 0;
     }
 
-    .destacados-ficha{
-        margin: 2em 0;
-        width: 90%;
-    }
-
-    .sinopsis{
-        display: block;
+    .home-featured-element{
+        padding-bottom: 2rem;
     }
 
     .sinopsis-descripcion{
@@ -539,11 +567,16 @@ img {
         width: 100%;
     }
 
-    .sinopsis-descripcion p{
+    .sinopsis {
+        padding: 1em 5%;
+    }
+
+    .sinopsis-description p{
+        font-size: 1.1rem;
         text-align: justify;
     }
     
-    .sinopsis-imagen{
-        width: 100%;
+    .sinopsis-image{
+        padding-bottom: 3rem;
     }
 }
