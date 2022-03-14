@@ -39,6 +39,16 @@ display inline: se da a las cajas
 display flex: se da a la caja que contiene las cajas.
 */
 
+.desktop-five-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-five-columns .column{
+    width: 18%;
+}
+
 .desktop-four-columns{
     display: flex;
     justify-content: space-between;
@@ -58,6 +68,7 @@ display flex: se da a la caja que contiene las cajas.
 .desktop-three-columns .column{
     width: 30%;
 }
+
 
 .desktop-two-columns .column{
     width: 48%;
@@ -127,15 +138,15 @@ h1, h2, h3, h4, h5, h6, a, p{
 }
 
 h1, h2, h3, h4 {
-    font-family: "Lora";
+    font-family: 'Cinzel', semi-bold;
 }
 
 h5, h6 {
-    font-family: "Ubuntu Condensed";
+    font-family: 'Work Sans', sans-serif;
 }
 
 a, td, p, button, span, label{
-    font-family: "Ubuntu";
+    font-family: 'Work Sans', sans-serif;
     color: hsl(270, 3%, 14%);
 }
 
@@ -303,6 +314,81 @@ img {
 }
 
 /*====================
+=======Product=========
+======================*/
+
+.product-title{
+
+}
+
+.product-author{
+    font-size: 1.4em;
+    text-align: center;
+    margin: 3% 3%;
+
+}
+
+.product-price{
+
+}
+
+.product-description{
+
+}
+
+.product-quantity{
+    margin: 1rem 0;
+    width: 30%;
+}
+
+.product-quantity-title{
+    padding: 0.2rem 0;
+}
+
+.product-quantity-title span{
+    font-weight: 600;
+}
+
+.product-quantity-button{
+    display: flex;
+    justify-content: left;
+    width: max-content
+}
+
+.product-quantity-button-element{
+    width: 15%;
+}
+
+.product-quantity-button-element input{
+    text-align: center;
+    background-color: white;
+    border: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 100%;
+}
+
+.product-quantity-button-element button{
+    background-color: white;
+    border: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 100%;
+}
+
+.product-add-to-cart{
+    margin-left: auto;
+    width: max-content;
+
+}
+
+.product-add-to-cart button{
+
+}
+
+
+
+/*====================
 =======Contacto=======
 ======================*/
 
@@ -422,7 +508,7 @@ input textarea{
 
 @media (max-width: 479px) {
 
-     /*====================
+        /*====================
     ========Columns=======
     ======================*/ 
 
